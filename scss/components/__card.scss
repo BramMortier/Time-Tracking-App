@@ -1,0 +1,79 @@
+// card styles
+
+.card {
+  min-height: 250px;
+  border-radius: 20px;
+  @include responsive(mobile){
+    min-height: 170px;
+  }
+  .card-header {
+    justify-content: space-between;
+    align-items: center;
+    i {
+      font-size: 1.5rem;
+      color: $white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .card-background {
+    border-radius: 20px;
+    height: 30%;
+    @include responsive(mobile){
+      height: 40%;
+      border-radius: 10px;
+    }
+    background-color: green;
+    z-index: 0;
+    &.background_0 {
+      background-color: $orange;
+      background-image: url('../../images/icon-work.svg');
+    }
+    &.background_1 {
+      background-color: $soft-blue;
+      background-image: url('../../images/icon-play.svg');
+    }
+    &.background_2 {
+      background-color: $light-red;
+      background-image: url('../../images/icon-study.svg');
+    }
+    &.background_3 {
+      background-color: $lime-green;
+      background-image: url('../../images/icon-exercise.svg');
+    }
+    &.background_4 {
+      background-color: $violet;
+      background-image: url('../../images/icon-social.svg');
+    }
+    &.background_5 {
+      background-color: $yellow;
+      background-image: url('../../images/icon-self-care.svg');
+    }
+  }
+  .card-info {
+    padding: 2rem;
+    background-color: $dark-blue;
+    z-index: 1;
+    margin-top: -30px;
+    border-radius: 20px;
+    height: calc(70% + 30px);
+    transition: background-color  200ms ease-in;
+    @include responsive(mobile){
+      height: calc(60% + 30px);
+      border-radius: 10px;
+    }
+    &:hover {
+      background-color: $desaturated-blue;
+      cursor: pointer;
+    }
+    .card-main {
+      @include responsive(mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

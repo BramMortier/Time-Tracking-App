@@ -1,0 +1,84 @@
+body {
+  background-color: $very-dark-blue;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 1200px;
+  @include responsive(mobile){
+    width: 90%;
+  }
+}
+
+.components-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  @include responsive(mobile){
+    grid-template-columns: 1fr;
+    margin-bottom: 5rem;
+  }
+  .main-card {
+    border-radius: 20px;
+    background-color: $dark-blue;
+    @include responsive(mobile){
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+    .personal-info-container {
+      background-color: $purple-ish;
+      border-radius: 20px;
+      padding: 2rem;
+      @include responsive(mobile){
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+      }
+      h1 {
+        width: min-content;
+        @include responsive(mobile){
+          width: max-content;
+          margin-bottom: 0;
+        }
+      }
+      img {
+        width: 40%;
+        border: $white solid 3px;
+        border-radius: 50%;
+        margin-bottom: 3rem;
+        @include responsive(mobile){
+          margin-bottom: 0;
+          margin-right: 2rem;
+          width: 20%;
+        }
+      }
+    }
+    .time-interval-container {
+      @include responsive(mobile){
+        display: flex;
+        justify-content: space-between;
+      }
+      padding: 2rem;
+      h2 {
+        font-weight: 300;
+        color: $pale-blue;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color ease-in 200ms;
+        &:hover {
+          color: $white;
+        }
+        &.active-interval {
+          color: $white;
+        }
+      }
+      h2:not(:last-child) {
+        margin-bottom: 1.5rem;
+        @include responsive(mobile){
+          margin: 0;
+        }
+      }
+    }
+  }
+}

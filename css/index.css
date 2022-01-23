@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  color: white;
+  font-size: 1rem;
+}
+
+h3 {
+  color: #bdc1ff;
+  font-weight: 300;
+}
+
+p {
+  font-size: 3.6rem;
+  font-weight: 300;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-span {
+  grid-column: span var(--amount, 2);
+}
+
+.row-span {
+  grid-row: span var(--amount, 2);
+}
+
+.background-img {
+  background-size: contain;
+  background-position: 90% center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  min-height: 250px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    min-height: 170px;
+  }
+}
+
+.card .card-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card-header i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card .card-header i:hover {
+  cursor: pointer;
+}
+
+.card .card-background {
+  border-radius: 20px;
+  height: 30%;
+  background-color: green;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .card .card-background {
+    height: 40%;
+    border-radius: 10px;
+  }
+}
+
+.card .card-background.background_0 {
+  background-color: #ff8c66;
+  background-image: url("../../images/icon-work.svg");
+}
+
+.card .card-background.background_1 {
+  background-color: #56c2e6;
+  background-image: url("../../images/icon-play.svg");
+}
+
+.card .card-background.background_2 {
+  background-color: #ff5c7c;
+  background-image: url("../../images/icon-study.svg");
+}
+
+.card .card-background.background_3 {
+  background-color: #4acf81;
+  background-image: url("../../images/icon-exercise.svg");
+}
+
+.card .card-background.background_4 {
+  background-color: #7536d3;
+  background-image: url("../../images/icon-social.svg");
+}
+
+.card .card-background.background_5 {
+  background-color: #f1c65b;
+  background-image: url("../../images/icon-self-care.svg");
+}
+
+.card .card-info {
+  padding: 2rem;
+  background-color: #1c1f4a;
+  z-index: 1;
+  margin-top: -30px;
+  border-radius: 20px;
+  height: calc(70% + 30px);
+  -webkit-transition: background-color  200ms ease-in;
+  transition: background-color  200ms ease-in;
+}
+
+@media only screen and (max-width: 600px) {
+  .card .card-info {
+    height: calc(60% + 30px);
+    border-radius: 10px;
+  }
+}
+
+.card .card-info:hover {
+  background-color: #363972;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .card .card-info .card-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+}
+
+body {
+  background-color: #0f1424;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 1200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .app-container {
+    width: 90%;
+  }
+}
+
+.components-grid {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-bottom: 5rem;
+  }
+}
+
+.components-grid .main-card {
+  border-radius: 20px;
+  background-color: #1c1f4a;
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid .main-card {
+    margin-top: 2rem;
+    border-radius: 10px;
+  }
+}
+
+.components-grid .main-card .personal-info-container {
+  background-color: #4b57dd;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid .main-card .personal-info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+  }
+}
+
+.components-grid .main-card .personal-info-container h1 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid .main-card .personal-info-container h1 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 0;
+  }
+}
+
+.components-grid .main-card .personal-info-container img {
+  width: 40%;
+  border: white solid 3px;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid .main-card .personal-info-container img {
+    margin-bottom: 0;
+    margin-right: 2rem;
+    width: 20%;
+  }
+}
+
+.components-grid .main-card .time-interval-container {
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid .main-card .time-interval-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.components-grid .main-card .time-interval-container h2 {
+  font-weight: 300;
+  color: #bdc1ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: color ease-in 200ms;
+  transition: color ease-in 200ms;
+}
+
+.components-grid .main-card .time-interval-container h2:hover {
+  color: white;
+}
+
+.components-grid .main-card .time-interval-container h2.active-interval {
+  color: white;
+}
+
+.components-grid .main-card .time-interval-container h2:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .components-grid .main-card .time-interval-container h2:not(:last-child) {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

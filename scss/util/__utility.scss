@@ -1,0 +1,35 @@
+// resets
+
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+// utility classes
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flex {
+  display: flex;
+}
+
+.col-span {
+  grid-column: span var(--amount, 2);
+}
+
+.row-span {
+  grid-row: span var(--amount, 2);
+}
+
+.background-img {
+  background-size: contain;
+  background-position: 90% center;
+  background-repeat: no-repeat;
+}
